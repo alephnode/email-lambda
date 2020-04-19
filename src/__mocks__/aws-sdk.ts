@@ -1,9 +1,11 @@
 import mockAWSResponse from './mockAWSResponse'
 
-export default {
-  SES: jest.fn(() => ({
-    sendEmail: jest.fn().mockReturnValue({
-      promise: () => Promise.resolve(mockAWSResponse),
-    }),
-  })),
+export const config = {
+  update: jest.fn(),
 }
+
+export const SES = jest.fn(() => ({
+  sendEmail: jest.fn().mockReturnValue({
+    promise: () => Promise.resolve(mockAWSResponse),
+  }),
+}))
