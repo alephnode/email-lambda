@@ -13,7 +13,7 @@ const handler: Handler = async (event: EmailEvent) => {
   if (!isValidEvent(event)) return invalidDataSupplied
   const params = event.details
   console.log(params)
-  return await sendEmail('I hate this')
+  return await sendEmail()
 }
 
 export { handler, EmailEvent }
