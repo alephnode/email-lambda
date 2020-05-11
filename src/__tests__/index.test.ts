@@ -3,7 +3,11 @@ import { invalidDataSupplied } from '../responses/invalidDataSupplied'
 
 describe('Index tests', () => {
   it('responds with expected string with valid params', async () => {
-    const res = await handler({ details: { text: 'hello' } }, null, null)
+    const res = await handler(
+      { details: { emailAddress: 'test@me.com', message: 'hello' } },
+      null,
+      null
+    )
     expect(res).toBeTruthy()
   })
   it('responds with error with valid params', async () => {
