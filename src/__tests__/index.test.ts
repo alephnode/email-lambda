@@ -11,7 +11,7 @@ describe('Index tests', () => {
     expect(res).toBeTruthy()
   })
   it('responds with error with valid params', async () => {
-    const res = await handler({ details: { message: 'hello' } }, null, null)
+    const res = await handler({ details: { text: 'hello' } }, null, null)
     expect(res).toEqual(invalidDataSupplied)
   })
 })
