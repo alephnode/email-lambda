@@ -7,8 +7,6 @@ describe('Index tests', () => {
       emailAddress: 'test@me.com',
       message: 'hello',
     })
-    console.log(res)
-    console.log(expectedResponse)
-    expect(JSON.stringify(res)).toEqual(JSON.stringify(expectedResponse))
+    expect(res).toStrictEqual(expectedResponse)
   })
 })
